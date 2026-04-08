@@ -6,7 +6,6 @@
 <br>
 
 ## 🚀 Chức năng chính
-
 - **Đăng ký tài khoản mới**.
 <br>
 <img width="396" height="746" alt="image" src="https://github.com/user-attachments/assets/be300ec6-e79c-492a-8aa4-b187b10df383" />
