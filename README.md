@@ -6,7 +6,6 @@
 <br>
 
 ## 🚀 Chức năng chính
-<br>
 
 - **Đăng ký tài khoản mới**.
 <br>
