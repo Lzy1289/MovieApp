@@ -1,10 +1,8 @@
 
 # 🎬 Movie Ticket Booking App
 <br>
-
 Ứng dụng đặt vé xem phim trực tuyến sử dụng ngôn ngữ Java trên nền tảng Android Studio, tích hợp Firebase làm Backend.
 <br>
-
 ## 🚀 Chức năng chính
 - **Đăng ký tài khoản mới**.
 <br>
