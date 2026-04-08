@@ -17,6 +17,7 @@ public class NotificationReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         String movieTitle = intent.getStringExtra("movieTitle");
+        String showtime = intent.getStringExtra("showtime");
 
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         String channelId = "movie_reminder_channel";
@@ -29,10 +30,13 @@ public class NotificationReceiver extends BroadcastReceiver {
         Intent mainIntent = new Intent(context, MainActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, mainIntent, PendingIntent.FLAG_IMMUTABLE);
 
+        // Đưa giờ chiếu lên đầu câu
+        String contentText = "Lúc " + showtime + " bắt đầu chiếu phim " + movieTitle + ". Chuẩn bị đi thôi!";
+
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, channelId)
                 .setSmallIcon(R.mipmap.ic_launcher)
                 .setContentTitle("Nhắc lịch xem phim!")
-                .setContentText("Phim " + movieTitle + " sắp đến giờ chiếu rồi. Chuẩn bị đi thôi!")
+                .setContentText(contentText)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setContentIntent(pendingIntent)
                 .setAutoCancel(true);

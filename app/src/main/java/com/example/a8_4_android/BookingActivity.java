@@ -184,6 +184,7 @@ public class BookingActivity extends AppCompatActivity {
     private void scheduleNotification(Date date, String title) {
         Intent intent = new Intent(this, NotificationReceiver.class);
         intent.putExtra("movieTitle", title);
+        intent.putExtra("showtime", selectedTime); // Thêm dòng này để truyền giờ chiếu
         PendingIntent pi = PendingIntent.getBroadcast(this, (int)System.currentTimeMillis(), intent, PendingIntent.FLAG_IMMUTABLE);
         AlarmManager am = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         if (am != null) am.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, date.getTime(), pi);
